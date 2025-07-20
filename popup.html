@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .status {
+      padding: 10px;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+    .active {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    .inactive {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .primary {
+      background-color: #007bff;
+      color: white;
+    }
+    .secondary {
+      background-color: #6c757d;
+      color: white;
+    }
+    .muted {
+      background-color: #dc3545;
+    }
+    .alert-count {
+      text-align: center;
+      font-weight: bold;
+      margin: 10px 0;
+      padding: 5px;
+      background-color: #f8f9fa;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Trading Data Monitor</h2>
+  <div id="status" class="status active">
+    Status: Active
+  </div>
+  <div id="alertCount" class="alert-count">
+    Alerts: 0/5
+  </div>
+  <button id="testAlarm" class="primary">Test Alarm</button>
+  <button id="toggleMute" class="secondary">Mute Alerts</button>
+  <button id="resetCount" class="secondary">Reset Count</button>
+  <button id="toggleMonitoring" class="secondary">Toggle Monitoring</button>
+  <script src="popup.js"></script>
+</body>
+</html> 
