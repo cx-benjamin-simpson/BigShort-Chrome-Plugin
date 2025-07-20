@@ -1,4 +1,6 @@
-# Trading Data Monitor Chrome Extension
+# WARNING THIS IS UNDER DEVELOPMENT!!!!! please dont trust money to any output of this program without verifying the results!
+
+
 
 A Chrome extension that monitors trading data and alerts when Put Wall 7 DTE exceeds Call Wall 7 DTE.
 
