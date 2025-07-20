@@ -17,13 +17,15 @@ A Chrome extension that monitors trading data and alerts when Put Wall 7 DTE exc
 2. Click the extension icon in the toolbar to open the popup
 3. The extension will automatically start monitoring the page
 4. When Put Wall 7 DTE exceeds Call Wall 7 DTE, an audio alarm will play
+5. You will need to not TOUCH the bigshort you want to monitor after clicking on the last candle.
+
+Test it out on COIN 7/18/25, as you scroll back and forth on the timeline you'll note it still has some hiccups
 
 ## Features
 
 - Automatic monitoring of trading data
 - Audio alerts when conditions are met
-- Test alarm functionality
-- Status monitoring through popup
+
 
 ## Files
 
