@@ -94,6 +94,22 @@ function monitorTradingData() {
             console.log('Values changed - Reset alert count to 0 and unmuted alarm');
             console.log('Put Wall:', lastPutWall, '→', putWall);
             console.log('Call Wall:', lastCallWall, '→', callWall);
+            // Play a short beep using Web Audio API for any change (lower frequency)
+            try {
+              const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+              const oscillator = audioContext.createOscillator();
+              const gainNode = audioContext.createGain();
+              oscillator.connect(gainNode);
+              gainNode.connect(audioContext.destination);
+              oscillator.frequency.setValueAtTime(400, audioContext.currentTime); // Lower frequency
+              oscillator.type = 'sine';
+              gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+              gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+              oscillator.start(audioContext.currentTime);
+              oscillator.stop(audioContext.currentTime + 0.5);
+            } catch (error) {
+              console.log('Web Audio API failed:', error);
+            }
             lastPutWall = putWall;
             lastCallWall = callWall;
           }
