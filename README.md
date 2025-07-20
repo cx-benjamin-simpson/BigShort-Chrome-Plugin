@@ -2,9 +2,11 @@
 
 
 
-A Chrome extension that monitors trading data and alerts when Put Wall 7 DTE exceeds Call Wall 7 DTE.
+A Chrome extension that monitors trading data and alerts when Put Wall 7 DTE exceeds Call Wall 7 DTE or alerts when GEX levels change.
 
 ## Installation
+
+Download the zip folder from Github
 
 1. Open Chrome and navigate to `chrome://extensions/`
 2. Enable "Developer mode" in the top right corner
